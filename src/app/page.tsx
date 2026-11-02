@@ -31,6 +31,9 @@ export default function HomePage() {
   const [passwordRequired, setPasswordRequired] = useState(false);
 
   useEffect(() => {
+    // ✅ 关键：构建阶段跳过，仅浏览器执行
+    if (typeof window === 'undefined') return;
+
     document.title = '';
     fetchStatus().then((res) => {
       setPasswordRequired(res.passwordRequired);
