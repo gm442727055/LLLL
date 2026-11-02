@@ -16,6 +16,8 @@ import { useToast } from '@/components/toast';
 import { EmptyState } from '@/components/states';
 import { Icon } from '@/components/icon';
 import { SiteFooter } from '@/components/site-footer';
+import { fetchStatus } from '@/lib/api';
+import { PasswordModal } from '@/components/password-modal';
 
 /**
  * 首页：搜索（URL ?s= 驱动，可后退/分享）+ 豆瓣推荐。
@@ -25,6 +27,30 @@ import { SiteFooter } from '@/components/site-footer';
 const RESULT_PAGE_SIZE = 60;
 
 export default function HomePage() {
+  const [verified, setVerified] = useState<boolean | null>(null);
+  const [passwordRequired, setPasswordRequired] = useState(false);
+
+  useEffect(() => {
+    document.title = '';
+    fetchStatus().then((res) => {
+      setPasswordRequired(res.passwordRequired);
+      setVerified(res.verified);
+      if (res.verified) document.title = 'LibreTV';
+    });
+  }, []);
+
+  if (verified === null) return null;
+  if (passwordRequired && !verified) {
+    return (
+      <PasswordModal
+        onSuccess={() => {
+          setVerified(true);
+          document.title = 'LibreTV';
+        }}
+      />
+    );
+  }
+
   return (
     <Suspense>
       <HomeContent />
@@ -201,15 +227,10 @@ function HomeContent() {
                   下拉展开时改为「上圆下直」并隐去底边，与下方浮层拼成同一个面板 */}
               <div
                 className={cn(
-                  // 12px 圆角矩形（非胶囊）：收起态与展开态共用同一组上圆角，
-                  // 展开时输入框这部分形状完全不发生变化，上下圆角也与下拉保持一致；
-                  // 右侧与上下不留内边距，由搜索按钮拉伸填满、与搜索框边缘贴合
                   'flex items-stretch min-h-12 pl-4 border',
                   'transition-[background-color,border-color,border-radius] duration-200',
                   searchHistory.visible
-                    ? // 展开时：外框（含上圆角）沿用输入框的聚焦样式不变，只把底边改为内部分隔线，
-                      // 使输入区在展开状态下仍是边界清晰的独立输入框，而非与列表糊成一片
-                      'rounded-t-xl rounded-b-none border-accent border-b-line bg-surface-raised'
+                    ? 'rounded-t-xl rounded-b-none border-accent border-b-line bg-surface-raised'
                     : 'rounded-xl border-line bg-chip focus-within:border-accent focus-within:ring-1 focus-within:ring-accent/40'
                 )}
               >
@@ -250,8 +271,6 @@ function HomeContent() {
                     <Icon name="close" className="w-4 h-4" />
                   </button>
                 )}
-                {/* 主操作按钮：贴合搜索框右端——右侧圆角跟随容器、左侧直角，展开时右下角
-                    跟着容器一起改直角；按压改用亮度反馈（缩放会让贴合边缘露出缝隙） */}
                 <button
                   type="submit"
                   className={cn(
@@ -266,7 +285,6 @@ function HomeContent() {
               </div>
             </form>
 
-            {/* 最近搜索：与输入框无缝拼接；浮层不占文档流，出现/消失不会顶动下方内容 */}
             {searchHistory.visible && (
               <SearchHistoryDropdown
                 id="home-search-history"
@@ -364,7 +382,6 @@ function HomeContent() {
           </section>
         )}
 
-        {/* 首页推荐（有搜索时隐藏） */}
         {!urlQuery && (
           <RecommendSection
             onPick={(title) => {
@@ -386,7 +403,6 @@ function ResultsSkeleton() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {Array.from({ length: 6 }).map((_, i) => (
-        // 结构对齐真实结果卡（左侧缩略图 + 右侧文字块），避免占位与真实卡片形状不符
         <div key={i} className="card flex h-28 overflow-hidden">
           <div className="w-[105px] sm:w-[120px] shrink-0 bg-chip animate-pulse" />
           <div className="flex-1 p-2.5 space-y-2">
@@ -400,7 +416,6 @@ function ResultsSkeleton() {
   );
 }
 
-/** 无点播源 / 未勾选点播源时的引导（替代旧版首屏静默空白） */
 function NoSourceGuide({ hasSources = false }: { hasSources?: boolean }) {
   return (
     <div className="border border-dashed border-line rounded-xl p-10 text-center max-w-lg mx-auto">
