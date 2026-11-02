@@ -16,8 +16,6 @@ import { useToast } from '@/components/toast';
 import { EmptyState } from '@/components/states';
 import { Icon } from '@/components/icon';
 import { SiteFooter } from '@/components/site-footer';
-import { fetchStatus } from '@/lib/api';
-import { PasswordModal } from '@/components/password-modal';
 
 /**
  * 首页：搜索（URL ?s= 驱动，可后退/分享）+ 豆瓣推荐。
@@ -27,30 +25,46 @@ import { PasswordModal } from '@/components/password-modal';
 const RESULT_PAGE_SIZE = 60;
 
 export default function HomePage() {
-  const [verified, setVerified] = useState<boolean | null>(null);
-  const [passwordRequired, setPasswordRequired] = useState(false);
+  const [verified, setVerified] = useState(false);
+  const [pwdInput, setPwdInput] = useState('');
+
+  // 在这里设置你的访问密码
+  const PASSWORD = "xiamuma";
+
+  const submit = () => {
+    if (pwdInput === PASSWORD) {
+      setVerified(true);
+      document.title = 'LibreTV';
+    } else {
+      alert('密码错误');
+    }
+  };
 
   useEffect(() => {
-    // ✅ 关键：构建阶段跳过，仅浏览器执行
-    if (typeof window === 'undefined') return;
-
     document.title = '';
-    fetchStatus().then((res) => {
-      setPasswordRequired(res.passwordRequired);
-      setVerified(res.verified);
-      if (res.verified) document.title = 'LibreTV';
-    });
   }, []);
 
-  if (verified === null) return null;
-  if (passwordRequired && !verified) {
+  if (!verified) {
     return (
-      <PasswordModal
-        onSuccess={() => {
-          setVerified(true);
-          document.title = 'LibreTV';
-        }}
-      />
+      <div className="min-h-screen flex items-center justify-center bg-surface">
+        <div className="p-6 rounded-xl border border-line w-72">
+          <h2 className="text-lg font-medium mb-4 text-center">请输入访问</h2>
+          <input
+            type="password"
+            className="w-full px-3 py-2 rounded-lg border border-line bg-chip mb-4 focus:outline-none focus:border-accent"
+            value={pwdInput}
+            onChange={(e) => setPwdInput(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && submit()}
+            placeholder="输入访问"
+          />
+          <button
+            onClick={submit}
+            className="w-full btn-primary py-2 rounded-lg"
+          >
+            确认
+          </button>
+        </div>
+      </div>
     );
   }
 
