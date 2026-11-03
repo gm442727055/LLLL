@@ -2,7 +2,7 @@ import type { SourceConfig } from './types';
 
 export function getEnvSources(): SourceConfig[] {
   return [
-        { key: "env_0",   name: "小猫咪资源",   url: "https://zy.xiaomaomi.cc/api.php/provide/vod/", detail: "https://zy.xiaomaomi.cc", isAdult: false },
+    { key: "env_0",   name: "小猫咪资源",   url: "https://zy.xiaomaomi.cc/api.php/provide/vod/", detail: "https://zy.xiaomaomi.cc", isAdult: false },
     { key: "env_1",   name: "海洋资源",     url: "https://www.seacms.org/zyapi.php", detail: "https://www.seacms.org", isAdult: false },
     { key: "env_2",   name: "虾米资源",     url: "https://zy.hls.one/api.php/provide/vod/", detail: "https://zy.hls.one", isAdult: false },
     { key: "env_3",   name: "奈斯官采",     url: "http://120.3.216.95:1688/api.php/provide/vod/", detail: "http://120.3.216.95:1688", isAdult: false },
