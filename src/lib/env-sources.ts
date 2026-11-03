@@ -2,129 +2,125 @@ import type { SourceConfig } from './types';
 
 export function getEnvSources(): SourceConfig[] {
   return [
-    {
-      key: "env_0",
-      name: "电影天堂资源",
-      url: "https://shturl.cc/zsnaUCEoQoozAWV0/api.php/provide/vod",
-      detail: "https://shturl.cc/zsnaUCEoQoozAWV0",
-      isAdult: false
-    },
-    {
-      key: "env_1",
-      name: "黑木耳",
-      url: "https://shturl.cc/mP49ARA1UIr38dffN2dyLTaEMmdFRuAfHF/api.php/provide/vod",
-      detail: "https://shturl.cc/KKVGceiJ",
-      isAdult: false
-    },
-    {
-      key: "env_2",
-      name: "如意资源",
-      url: "https://shturl.cc/K5EvU1ijetCWZxIyU2P4d46QEizExAX/api.php/provide/vod",
-      isAdult: false
-    },
-    {
-      key: "env_3",
-      name: "暴风资源",
-      url: "https://bfzyapi.com/api.php/provide/vod",
-      isAdult: false
-    },
-    {
-      key: "env_4",
-      name: "天涯资源",
-      url: "https://tyyszy.com/api.php/provide/vod",
-      isAdult: false
-    },
-    {
-      key: "env_5",
-      name: "非凡影视",
-      url: "https://shturl.cc/tuuqe/api.php/provide/vod",
-      detail: "https://shturl.cc/tuuqe",
-      isAdult: false
-    },
-    {
-      key: "env_6",
-      name: "360资源",
-      url: "https://shturl.cc/fbQLQ0pFwQvgDLvOAERRBQCbxES/api.php/provide/vod",
-      isAdult: false
-    },
-    {
-      key: "env_7",
-      name: "茅台资源",
-      url: "https://caiji.maotaizy.cc/api.php/provide/vod",
-      isAdult: false
-    },
-    {
-      key: "env_8",
-      name: "卧龙资源",
-      url: "https://wolongzyw.com/api.php/provide/vod",
-      isAdult: false
-    },
-    {
-      key: "env_9",
-      name: "极速资源",
-      url: "https://jszyapi.com/api.php/provide/vod",
-      detail: "https://jszyapi.com",
-      isAdult: false
-    },
-    {
-      key: "env_10",
-      name: "豆瓣资源",
-      url: "https://shturl.cc/LJLGfgvWpLMJmmxUsGIOrT4vy/api.php/provide/vod",
-      isAdult: false
-    },
-    {
-      key: "env_11",
-      name: "魔爪资源",
-      url: "https://shturl.cc/h91kjcrMfuVJub3VMQoqWiIgtnGevs/api.php/provide/vod",
-      isAdult: false
-    },
-    {
-      key: "env_12",
-      name: "魔都资源",
-      url: "https://shturl.cc/EXMPUgWEa5PZcLXIiWRRTXNvXHdaxr6Dw/api.php/provide/vod",
-      isAdult: false
-    },
-    {
-      key: "env_13",
-      name: "最大资源",
-      url: "https://api.zuidapi.com/api.php/provide/vod",
-      isAdult: false
-    },
-    {
-      key: "env_14",
-      name: "樱花资源",
-      url: "https://m3u8.apiyhzy.com/api.php/provide/vod",
-      isAdult: false
-    },
-    {
-      key: "env_15",
-      name: "无尽资源",
-      url: "https://api.wujinapi.me/api.php/provide/vod",
-      isAdult: false
-    },
-    {
-      key: "env_16",
-      name: "旺旺短剧",
-      url: "https://shturl.cc/5vBODVJP7a1vpTsUJgYPR6rt9/api.php/provide/vod",
-      isAdult: false
-    },
-    {
-      key: "env_17",
-      name: "iKun资源",
-      url: "https://ikunzyapi.com/api.php/provide/vod",
-      isAdult: false
-    },
-    {
-      key: "env_18",
-      name: "量子资源站",
-      url: "https://cj.lziapi.com/api.php/provide/vod",
-      isAdult: false
-    },
-    {
-      key: "env_19",
-      name: "小猫咪资源",
-      url: "https://zy.xmm.hk/api.php/provide/vod",
-      isAdult: false
-    }
+        { key: "env_0",   name: "小猫咪资源",   url: "https://zy.xiaomaomi.cc/api.php/provide/vod/", detail: "https://zy.xiaomaomi.cc", isAdult: false },
+    { key: "env_1",   name: "海洋资源",     url: "https://www.seacms.org/zyapi.php", detail: "https://www.seacms.org", isAdult: false },
+    { key: "env_2",   name: "虾米资源",     url: "https://zy.hls.one/api.php/provide/vod/", detail: "https://zy.hls.one", isAdult: false },
+    { key: "env_3",   name: "奈斯官采",     url: "http://120.3.216.95:1688/api.php/provide/vod/", detail: "http://120.3.216.95:1688", isAdult: false },
+    { key: "env_4",   name: "金蝉资源",     url: "https://zy.jinchancaiji.com/api.php/provide/vod/", detail: "https://zy.jinchancaiji.com", isAdult: false },
+    { key: "env_5",   name: "建安资源",     url: "http://154.219.117.232:9981/jacloudapi.php/provide/vod/", detail: "http://154.219.117.232:9981", isAdult: false },
+    { key: "env_6",   name: "小绵羊资源",   url: "https://vs.okcdn100.top/api.php/provide/vod/", detail: "https://vs.okcdn100.top", isAdult: false },
+    { key: "env_7",   name: "U酷资源",      url: "https://api.ukuapi88.com/api.php/provide/vod/", detail: "https://api.ukuapi88.com", isAdult: false },
+    { key: "env_8",   name: "360资源",      url: "https://360zy.com/api.php/provide/vod/", detail: "https://360zy.com", isAdult: false },
+    { key: "env_9",   name: "聚星资源",     url: "https://jxzyw.top/api.php/provide/vod/", detail: "https://jxzyw.top", isAdult: false },
+    { key: "env_10",  name: "茅台资源",     url: "https://caiji.maotaizy.cc/api.php/provide/vod/", detail: "https://caiji.maotaizy.cc", isAdult: false },
+    { key: "env_11",  name: "金马资源",     url: "https://api.jmzy.com/api.php/provide/vod/", detail: "https://api.jmzy.com", isAdult: false },
+    { key: "env_12",  name: "豆瓣资源",     url: "https://caiji.dbzy.tv/api.php/provide/vod/", detail: "https://caiji.dbzy.tv", isAdult: false },
+    { key: "env_13",  name: "黑木耳资源",   url: "https://json.heimuer.xyz/api.php/provide/vod/", detail: "https://json.heimuer.xyz", isAdult: false },
+    { key: "env_14",  name: "鸭鸭资源",     url: "https://cj.yayazy.net/api.php/provide/vod/", detail: "https://cj.yayazy.net", isAdult: false },
+    { key: "env_15",  name: "牛牛资源",     url: "https://api.niuniuzy.me/api.php/provide/vod/", detail: "https://api.niuniuzy.me", isAdult: false },
+    { key: "env_16",  name: "OK资源",       url: "https://api.okzy.org/api.php/provide/vod/", detail: "https://api.okzy.org", isAdult: false },
+    { key: "env_17",  name: "淘片资源",     url: "https://taopianapi.com/cjapi/mc10/vod/json.html", detail: "https://taopianapi.com", isAdult: false },
+    { key: "env_18",  name: "华为吧",       url: "https://huawei8.live/api.php/provide/vod/", detail: "https://huawei8.live", isAdult: false },
+    { key: "env_19",  name: "索尼资源",     url: "https://suoniapi.com/api.php/provide/vod/", detail: "https://suoniapi.com", isAdult: false },
+    { key: "env_20",  name: "豪华资源",     url: "https://hhzyapi.com/api.php/provide/vod/", detail: "https://hhzyapi.com", isAdult: false },
+    { key: "env_21",  name: "速播资源",     url: "https://subocaiji.com/api.php/provide/vod/", detail: "https://subocaiji.com", isAdult: false },
+    { key: "env_22",  name: "虎牙资源",     url: "https://www.huyaapi.com/api.php/provide/vod/", detail: "https://www.huyaapi.com", isAdult: false },
+    { key: "env_23",  name: "魔都资源",     url: "https://www.moduzy.com/api.php/provide/vod/", detail: "https://www.moduzy.com", isAdult: false },
+    { key: "env_24",  name: "最大资源",     url: "https://api.zuidapi.com/api.php/provide/vod/", detail: "https://api.zuidapi.com", isAdult: false },
+    { key: "env_25",  name: "暴风资源",     url: "https://bfzyapi.com/api.php/provide/vod/", detail: "https://bfzyapi.com", isAdult: false },
+    { key: "env_26",  name: "CK资源",       url: "https://ckzy.me/api.php/provide/vod/", detail: "https://ckzy.me", isAdult: false },
+    { key: "env_27",  name: "极速资源",     url: "https://jszyapi.com/api.php/provide/vod/", detail: "https://jszyapi.com", isAdult: false },
+    { key: "env_28",  name: "火狐资源",     url: "https://hhzyapi.com/api.php/provide/vod/", detail: "https://hhzyapi.com", isAdult: false },
+    { key: "env_29",  name: "金鹰资源",     url: "https://jyzyapi.com/provide/vod/", detail: "https://jyzyapi.com", isAdult: false },
+    { key: "env_30",  name: "爱坤资源",     url: "https://ikunzyapi.com/api.php/provide/vod/", detail: "https://ikunzyapi.com", isAdult: false },
+    { key: "env_31",  name: "非凡资源",     url: "https://cj.ffzyapi.com/api.php/provide/vod/", detail: "https://cj.ffzyapi.com", isAdult: false },
+    { key: "env_32",  name: "量子资源",     url: "https://cj.lziapi.com/api.php/provide/vod/", detail: "https://cj.lziapi.com", isAdult: false },
+    { key: "env_33",  name: "卧龙资源",     url: "https://collect.wolongzyw.com/api.php/provide/vod/", detail: "https://collect.wolongzyw.com", isAdult: false },
+    { key: "env_34",  name: "红牛资源",     url: "https://www.hongniuzy2.com/api.php/provide/vod/", detail: "https://www.hongniuzy2.com", isAdult: false },
+    { key: "env_35",  name: "樱花资源",     url: "https://m3u8.apiyhzy.com/api.php/provide/vod/", detail: "https://m3u8.apiyhzy.com", isAdult: false },
+    { key: "env_36",  name: "闪电资源",     url: "https://sdzyapi.com/api.php/provide/vod/", detail: "https://sdzyapi.com", isAdult: false },
+    { key: "env_37",  name: "光速资源",     url: "https://api.guangsuapi.com/api.php/provide/vod/", detail: "https://api.guangsuapi.com", isAdult: false },
+    { key: "env_38",  name: "新浪资源",     url: "https://api.xinlangapi.com/xinlangapi.php/provide/vod/", detail: "https://api.xinlangapi.com", isAdult: false },
+    { key: "env_39",  name: "百度资源",     url: "https://api.apibdzy.com/api.php/provide/vod/", detail: "https://api.apibdzy.com", isAdult: false },
+    { key: "env_40",  name: "无尽资源",     url: "https://api.wujinapi.net/api.php/provide/vod/", detail: "https://api.wujinapi.net", isAdult: false },
+    { key: "env_41",  name: "影图",         url: "https://cj.vodimg.top/api.php/provide/vod/", detail: "https://cj.vodimg.top", isAdult: false },
+    { key: "env_42",  name: "天翼影视",     url: "https://www.911ysw.top/tianyi.php/provide/vod/", detail: "https://www.911ysw.top", isAdult: false },
+    { key: "env_43",  name: "飘零影院",     url: "https://p2100.net/api.php/provide/vod/", detail: "https://p2100.net", isAdult: false },
+    { key: "env_44",  name: "如意资源",     url: "https://cj.rycjapi.com/api.php/provide/vod/", detail: "https://cj.rycjapi.com", isAdult: false },
+    { key: "env_45",  name: "魔爪资源",     url: "https://mozhuazy.com/api.php/provide/vod/", detail: "https://mozhuazy.com", isAdult: false },
+    { key: "env_46",  name: "无限资源",     url: "https://api.wuxianzy.net/api.php/provide/vod/", detail: "https://api.wuxianzy.net", isAdult: false },
+    { key: "env_47",  name: "优质资源库",   url: "https://api.yzzy-api.com/inc/api_mac10.php", detail: "https://api.yzzy-api.com", isAdult: false },
+    { key: "env_48",  name: "旺旺短剧",     url: "https://api.wwzy.tv/api.php/provide/vod/", detail: "https://api.wwzy.tv", isAdult: false },
+    { key: "env_49",  name: "天涯资源",     url: "https://ty.tyyszy5.com/api.php/provide/vod/", detail: "https://ty.tyyszy5.com", isAdult: false },
+    { key: "env_50",  name: "蜂巢片库",     url: "https://api.fczy888.me/api.php/provide/vod/", detail: "https://api.fczy888.me", isAdult: false },
+    { key: "env_51",  name: "电影天堂",     url: "https://caiji.dyttzyapi.com/api.php/provide/vod/", detail: "https://caiji.dyttzyapi.com", isAdult: false },
+    { key: "env_52",  name: "爱奇艺资源",   url: "https://iqiyizyapi.com/api.php/provide/vod/", detail: "https://iqiyizyapi.com", isAdult: false },
+    { key: "env_53",  name: "小熊影视",     url: "http://47.94.99.16:3074/api.php/provide/vod/", detail: "http://47.94.99.16:3074", isAdult: false },
+    { key: "env_54",  name: "优速资源",     url: "https://yszyw1.top/api.php/provide/vod/", detail: "https://yszyw1.top", isAdult: false },
+    { key: "env_55",  name: "白狐资源",     url: "https://baihuzy.com/api.php/provide/vod/", detail: "https://baihuzy.com", isAdult: false },
+    { key: "env_56",  name: "155资源",      url: "https://155api.com/api.php/provide/vod/", detail: "https://155api.com", isAdult: false },
+    { key: "env_57",  name: "森林资源",     url: "https://slapibf.com/api.php/provide/vod/", detail: "https://slapibf.com", isAdult: false },
+    { key: "env_58",  name: "乐播资源",     url: "https://lbapi9.com/api.php/provide/vod/", detail: "https://lbapi9.com", isAdult: false },
+    { key: "env_59",  name: "百万资源",     url: "https://api.bwzym3u8.com/api.php/provide/vod/", detail: "https://api.bwzym3u8.com", isAdult: false },
+    { key: "env_60",  name: "奥斯卡资源",   url: "https://aosikazy2.com/api.php/provide/vod/", detail: "https://aosikazy2.com", isAdult: false },
+    { key: "env_61",  name: "X细胞资源",    url: "https://www.xxibaozyw.com/api.php/provide/vod/", detail: "https://www.xxibaozyw.com", isAdult: false },
+    { key: "env_62",  name: "YES资源",      url: "https://www.yeszy1.com/api.php/provide/vod/", detail: "https://www.yeszy1.com", isAdult: false },
+    { key: "env_63",  name: "番茄资源",     url: "https://fqzy4.me/api.php/provide/vod/", detail: "https://fqzy4.me", isAdult: false },
+    { key: "env_64",  name: "百花资源",     url: "https://bhziyuan.com/api.php/provide/vod/", detail: "https://bhziyuan.com", isAdult: false },
+    { key: "env_65",  name: "麒麟资源站",   url: "http://www.qilinzyz.com/api.php/provide/vod/", detail: "http://www.qilinzyz.com", isAdult: false },
+    { key: "env_66",  name: "辣椒资源",     url: "https://apilj.com/api.php/provide/vod/", detail: "https://apilj.com", isAdult: false },
+    { key: "env_67",  name: "魔都动漫资源", url: "https://www.mdzyapi.com/api.php/provide/vod/", detail: "https://www.mdzyapi.com", isAdult: false },
+    { key: "env_68",  name: "丫丫资源",     url: "https://cj.yayazy.net/api.php/provide/vod/", detail: "https://cj.yayazy.net", isAdult: false },
+    { key: "env_69",  name: "360资源(备用)", url: "https://360zyzz.com/api.php/provide/vod/", detail: "https://360zyzz.com", isAdult: false },
+    { key: "env_70",  name: "爱坤联盟资源", url: "https://www.jkunzyapi.com/api.php/provide/vod/", detail: "https://www.jkunzyapi.com", isAdult: false },
+
+    // ===== 成人资源 (isAdult: true) =====
+    { key: "env_71",  name: "GAY资源",      url: "https://gayapi.com/api.php/provide/vod/", detail: "https://gayapi.com", isAdult: true },
+    { key: "env_72",  name: "大奶子资源",   url: "https://apidanaizi.com/api.php/provide/vod/", detail: "https://apidanaizi.com", isAdult: true },
+    { key: "env_73",  name: "小鸡资源",     url: "https://api.xiaojizy.live/provide/vod/", detail: "https://api.xiaojizy.live", isAdult: true },
+    { key: "env_74",  name: "鲨鱼资源",     url: "https://shayuapi.com/api.php/provide/vod/", detail: "https://shayuapi.com", isAdult: true },
+    { key: "env_75",  name: "桃花资源",     url: "https://thzy1.me/api.php/provide/vod/", detail: "https://thzy1.me", isAdult: true },
+    { key: "env_76",  name: "湿乐园",       url: "https://xxavs.com/api.php/provide/vod/", detail: "https://xxavs.com", isAdult: true },
+    { key: "env_77",  name: "优异资源",     url: "https://a.uezy.pw/api.php/provide/vod/", detail: "https://a.uezy.pw", isAdult: true },
+    { key: "env_78",  name: "精品葡萄",     url: "https://caiji.putaozyw.net/inc/apijson_vod.php", detail: "https://caiji.putaozyw.net", isAdult: true },
+    { key: "env_79",  name: "黄瓜资源",     url: "https://to.to-long.com/api.php/provide/vod/", detail: "https://to.to-long.com", isAdult: true },
+    { key: "env_80",  name: "丝袜资源",     url: "https://www.siwazyw.tv/api.php/provide/vod/", detail: "https://www.siwazyw.tv", isAdult: true },
+    { key: "env_81",  name: "色猫资源",     url: "https://caiji.semaozy.net/inc/apijson_vod.php", detail: "https://caiji.semaozy.net", isAdult: true },
+    { key: "env_82",  name: "滴滴资源",     url: "https://api.ddapi.cc/api.php/provide/vod/", detail: "https://api.ddapi.cc", isAdult: true },
+    { key: "env_83",  name: "玉兔资源",     url: "https://apiyutu.com/api.php/provide/vod/", detail: "https://apiyutu.com", isAdult: true },
+    { key: "env_84",  name: "草榴资源",     url: "https://www.caoliuzyw.com/api.php/provide/vod/", detail: "https://www.caoliuzyw.com", isAdult: true },
+    { key: "env_85",  name: "色南国资源",   url: "https://api.sexnguon.com/api.php/provide/vod/", detail: "https://api.sexnguon.com", isAdult: true },
+    { key: "env_86",  name: "美少女资源",   url: "https://www.msnii.com/api/json.php", detail: "https://www.msnii.com", isAdult: true },
+    { key: "env_87",  name: "淫水机资源",   url: "https://www.xrbsp.com/api/json.php", detail: "https://www.xrbsp.com", isAdult: true },
+    { key: "env_88",  name: "香奶儿资源",   url: "https://www.gdlsp.com/api/json.php", detail: "https://www.gdlsp.com", isAdult: true },
+    { key: "env_89",  name: "白嫖资源",     url: "https://www.kxgav.com/api/json.php", detail: "https://www.kxgav.com", isAdult: true },
+    { key: "env_90",  name: "黄AV资源",     url: "https://www.pgxdy.com/api/json.php", detail: "https://www.pgxdy.com", isAdult: true },
+    { key: "env_91",  name: "大地资源",     url: "https://dadiapi.com/api.php", detail: "https://dadiapi.com", isAdult: true },
+    { key: "env_92",  name: "富二代资源",   url: "http://f2dcj6.com/sapi", detail: "http://f2dcj6.com", isAdult: true },
+    { key: "env_93",  name: "利来资源",     url: "http://llzxcj.com/inc/sck.php", detail: "http://llzxcj.com", isAdult: true },
+    { key: "env_94",  name: "番号资源",     url: "http://fhapi9.com/api.php/provide/vod/", detail: "http://fhapi9.com", isAdult: true },
+    { key: "env_95",  name: "91视频",       url: "https://91av.cyou/api.php/provide/vod/", detail: "https://91av.cyou", isAdult: true },
+    { key: "env_96",  name: "环亚资源",     url: "http://hysscj.com/inc/sapi.php", detail: "http://hysscj.com", isAdult: true },
+    { key: "env_97",  name: "奶香香资源",   url: "https://naixxzy1.com/api.php/provide/vod/", detail: "https://naixxzy1.com", isAdult: true },
+    { key: "env_98",  name: "搜AV资源",     url: "https://api.souavzy.vip/api.php/provide/vod/", detail: "https://api.souavzy.vip", isAdult: true },
+    { key: "env_99",  name: "杏吧资源",     url: "https://xingba111.com/api.php/provide/vod/", detail: "https://xingba111.com", isAdult: true },
+    { key: "env_100", name: "黄色仓库",     url: "https://hsckzy.vip/api.php/provide/vod/", detail: "https://hsckzy.vip", isAdult: true },
+    { key: "env_101", name: "558资源",      url: "http://558zy.com/api.php/provide/vod/", detail: "http://558zy.com", isAdult: true },
+    { key: "env_102", name: "VOV伦理",      url: "https://vovzy.com/api.php/provide/vod/", detail: "https://vovzy.com", isAdult: true },
+    { key: "env_103", name: "幸资源",       url: "https://xzybb1.com/api.php/provide/vod/", detail: "https://xzybb1.com", isAdult: true },
+    { key: "env_104", name: "91资源",       url: "https://91jpzyw.com/api.php/provide/vod/", detail: "https://91jpzyw.com", isAdult: true },
+    { key: "env_105", name: "老色逼资源",   url: "https://apilsbzy1.com/api.php/provide/vod/", detail: "https://apilsbzy1.com", isAdult: true },
+    { key: "env_106", name: "杏吧资源(备)", url: "https://xingba222.com/api.php/provide/vod/", detail: "https://xingba222.com", isAdult: true },
+    { key: "env_107", name: "黄色仓库(备)", url: "https://hsckzy888.com/api.php/provide/vod/", detail: "https://hsckzy888.com", isAdult: true },
+    { key: "env_108", name: "丝袜资源(备)", url: "https://siwazyw.tv/api.php/provide/vod/", detail: "https://siwazyw.tv", isAdult: true },
+    { key: "env_109", name: "奶香香资源(备)", url: "https://Naixxzy.com/api.php/provide/vod/", detail: "https://Naixxzy.com", isAdult: true },
+    { key: "env_110", name: "S猫资源",      url: "https://caiji.semaozy.net/inc/api.php/provide/vod/", detail: "https://caiji.semaozy.net", isAdult: true },
+    { key: "env_111", name: "大奶子资源(备)", url: "https://apidanaizi.com/api.php/provide/vod/", detail: "https://apidanaizi.com", isAdult: true },
+    { key: "env_112", name: "玉兔资源(备)", url: "https://apiyutu.com/api.php/provide/vod/", detail: "https://apiyutu.com", isAdult: true },
+    { key: "env_113", name: "桃花资源(备)", url: "https://thzy1.me/api.php/provide/vod/", detail: "https://thzy1.me", isAdult: true },
+    { key: "env_114", name: "搜AV资源(备)", url: "https://api.souavzy.vip/api.php/provide/vod/", detail: "https://api.souavzy.vip", isAdult: true },
+    { key: "env_115", name: "幸资源(备)",   url: "https://xzybb1.com/api.php/provide/vod/", detail: "https://xzybb1.com", isAdult: true },
+    { key: "env_116", name: "91精品资源",   url: "https://91jpzyw.com/api.php/provide/vod/", detail: "https://91jpzyw.com", isAdult: true },
+    { key: "env_117", name: "杏资源(备)",   url: "https://xzybb1.com/api.php/provide/vod/", detail: "https://xzybb1.com", isAdult: true }
   ];
 }
